@@ -4,11 +4,10 @@ fetch('countries.json')
 
   console.log(json)
   
-  // sort an array of countries by comparing area
-  let sorted = json.sort((a,b) =>  a.area - b.area  ); 
+  // sort a copy of the array by comparing area, without mutating the original data
+  const sorted = [...json].sort((a, b) => a.area - b.area);
 
-  
-   sorted.forEach( country => { 
+  sorted.forEach(country => { 
 
      // dynamically construct a url for a flag
      // based on the ISO code. 
