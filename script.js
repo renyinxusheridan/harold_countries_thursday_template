@@ -30,4 +30,3 @@ fetch('countries.json')
   })
  
 })
-
